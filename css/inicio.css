@@ -1,0 +1,18 @@
+.div_inicio,
+.div_about {
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+}
+
+.div_inicio {
+    height: 70vh;
+}
+
+.div_about {
+    height: 85vh;
+}
+
+.div_agenda {
+    height: 90vh;
+}
