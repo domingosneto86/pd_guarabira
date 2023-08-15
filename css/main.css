@@ -1,5 +1,6 @@
 * {
-    font-family: 'Arial';
+    font-family: 'DM Sans', 'Arial';
+    color: #3947B7;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -14,16 +15,12 @@ div {
 }
 
 .header {
-    position: fixed;
-    top: 0;
-    left: 0;
     width: 100vw;
-    height: 10vh;
-    background-color: white;
+    height: 6vw;
 }
 
 .div_logo_header {
-    height: 10vh;
+    height: 6vw;
     width: 16vw;
     display: flex;
     justify-content: center;
@@ -62,8 +59,8 @@ div {
 }
 
 .main_div {
-    margin-top: 10vh;
-    height: calc(100vh - 10vh);
+    top: 10vh;
+    height: calc(100vh - 6vw);
     width: 100vw;
     overflow-y: scroll;
 }
@@ -74,7 +71,10 @@ div {
 
 .footer {
     background-color: #3947B7;
-    height: 40vh;
+    height: 15vh;
+    background-size: 100vw auto;
+    background-repeat: no-repeat;
+    background-position: bottom;
 }
 
 @media screen and (orientation: portrait) {
@@ -94,7 +94,10 @@ div {
         font-size: 0.8vh;
     }
     .main_div {
-        margin-top: 4vh;
+        margin-top: -6vh;
         height: calc(100vh - 4vh);
+    }
+    .footer {
+        height: 6vh;
     }
 }
