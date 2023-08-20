@@ -60,7 +60,7 @@ div {
 
 .main_div {
     top: 10vh;
-    height: calc(100vh - 6vw);
+    height: 100vh;
     width: 100vw;
     overflow-y: scroll;
 }
@@ -69,10 +69,20 @@ div {
     display: none;
 }
 
+.div_content {
+    height: 94vh;
+    width: 100vw;
+    overflow-y: scroll;
+}
+
+.div_content::-webkit-scrollbar {
+    display: none;
+}
+
 .footer {
     background-color: #3947B7;
     height: 15vh;
-    background-size: 100vw auto;
+    background-size: auto 15vh;
     background-repeat: no-repeat;
     background-position: bottom;
 }
@@ -93,11 +103,11 @@ div {
     .div_menu_item {
         font-size: 0.8vh;
     }
-    .main_div {
-        margin-top: -6vh;
-        height: calc(100vh - 4vh);
+    .div_content {
+        height: 96vh;
     }
     .footer {
         height: 6vh;
+        background-size: 100vw auto;
     }
 }
