@@ -14,7 +14,7 @@ function main() {
     main_div.appendChild(div_content)
 
     buildInicio()
-    buildFooter()
+
 
 }
 
@@ -40,8 +40,17 @@ function buildHeader() {
     div_menu.className = 'div_menu'
     header.appendChild(div_menu)
 
+    /* div_menu_item = document.createElement('div')
+    div_menu_item.id = 'div_menu_item_inicio'
+    div_menu_item.className = 'div_menu_item'
+    div_menu_item.innerHTML = 'INÍCIO'
+    div_menu.appendChild(div_menu_item)
+    div_menu_item.onclick = function() {
+        buildInicio()
+    } */
+
     list_options_menu = ['INÍCIO', 'O QUE É', 'AGENDA', 'PARTICIPAÇÃO SOCIAL', 'PRODUTOS', 'PARTICIPE JÁ', 'DÚVIDAS', 'NOTÍCIAS']
-    list_builders = [buildInicio]
+    list_builders = [buildInicio, buildAbout]
         //for (i in list_options_menu) {
     list_options_menu.forEach(function(option, i) {
         div_menu_item = document.createElement('div')
@@ -50,14 +59,41 @@ function buildHeader() {
         div_menu_item.innerHTML = list_options_menu[i]
         div_menu.appendChild(div_menu_item)
 
-        /* div_menu_item.onclick = function() {
-            console.log(option, i)
+        div_menu_item.onclick = function() {
             list_builders[i]()
-        } */
+        }
     })
 }
 
+function buildAbout() {
+    div_content.innerHTML = ''
 
+    //INÍCIO
+    div_about_inicio = document.createElement('div')
+    div_about_inicio.id = 'div_about_inicio'
+    div_about_inicio.className = 'div_about_inicio'
+    div_about_inicio.style.backgroundImage = 'url(images/panoramica_inicio.png)'
+    div_content.appendChild(div_about_inicio)
+
+    div_about_inicio_desc = document.createElement('div')
+    div_about_inicio_desc.id = 'div_about_inicio_desc'
+    div_about_inicio_desc.className = 'div_about_inicio_desc'
+    div_about_inicio_desc.innerHTML = 'O que é o Plano Diretor das Cidades?'
+    div_about_inicio.appendChild(div_about_inicio_desc)
+
+    //OVERVIEW
+    div_about_overview = document.createElement('div')
+    div_about_overview.id = 'div_about_overview'
+    div_about_overview.className = 'div_about_overview'
+    div_about_overview.innerHTML = `O Plano Diretor, como parte integrante do processo de planejamento municipal, é previsto na nossa Constituição e no Estatuto da Cidade (2001) como o instrumento básico da política de desenvolvimento e de expansão da cidade. Dele resulta um conjunto de leis que tem como objetivo ordenar a cidade para o pleno desenvolvimento das suas funções sociais e para a garantia do bem-estar de seus habitantes.​
+
+    De acordo com o Estatuto da Cidade (2001), a Lei do Plano Diretor é obrigatória para cidades com mais de 20 mil habitantes e deve ser revista a cada 10 anos. Visto que o Plano Diretor vigente em Guarabira foi constituído em 2008, agora atuamos para a realização desta revisão. Como as cidades seguem em constante crescimento, é preciso que essas leis sejam constantemente revisadas e chegou a vez de Guarabira. A licitação para a contratação de uma consultoria para auxiliar a Equipe Técnica Municipal (ETM) na revisão foi realizada em 2019. Ainda em 2019, foi elaborado o plano executivo de trabalho que propõe a estrutura do processo de revisão, tendo seu lançamento oficial em 2020.  
+    
+    Buscando sua construção coletiva, o Plano Diretor de Guarabira apoia-se na promoção da participação democrática de diversos setores da sociedade, como a gestão municipal, ONGs, conselhos municipais, órgãos ambientais, empresas e sindicatos, universidades e instituições de pesquisa, líderes de associações comunitárias e a população, através de eventos, reuniões, audiências e consultas públicas.`
+    div_content.appendChild(div_about_overview)
+
+    buildFooter()
+}
 
 function buildInicio() {
     div_content.innerHTML = ''
@@ -170,23 +206,8 @@ function buildInicio() {
     div_overview_img.style.backgroundImage = 'url(images/003.png)'
     div_overview.appendChild(div_overview_img)
 
-
     playCarousel()
-
-    //O QUE É
-    /* div_about = document.createElement('div')
-    div_about.id = 'div_about'
-    div_about.style.backgroundImage = 'url(images/backgrounds01.png)'
-    div_about.className = 'div_about'
-
-    main_div.appendChild(div_about) */
-
-    //AGENDA
-    /* div_agenda = document.createElement('div')
-    div_agenda.id = 'div_agenda'
-    div_agenda.className = 'div_agenda'
-    div_agenda.style.backgroundImage = 'url(images/backgrounds03.png)'
-    main_div.appendChild(div_agenda) */
+    buildFooter()
 }
 
 function buildFooter() {

@@ -60,6 +60,10 @@ function playCarousel() {
         slides = carousel.querySelectorAll('.slide');
         indicators = carousel.querySelectorAll('.indicator');
 
+        if (switcher) {
+            clearInterval(switcher);
+        }
+
         switcher = setInterval(function() {
             switchSlide();
         }, speed);
