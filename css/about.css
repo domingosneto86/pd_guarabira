@@ -9,23 +9,18 @@
 }
 
 .div_about_inicio_desc {
-    background-color: #FBB91F;
-    color: #3947B7;
-    font-size: 2.5vw;
-    font-weight: bold;
+    color: #FFF;
+    font-size: 3vw;
+    font-weight: 800;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 1.5vw;
-    border-radius: 2vw 0px 2vw 0px;
-    box-shadow: 1vw 1vw #3947B7;
 }
 
 .div_about_overview {
     height: 50vh;
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
+    color: #323232;
     margin: 3vw 0;
     padding: 0 15vw;
     white-space: pre-line;
@@ -37,7 +32,8 @@
         height: 20vh;
     }
     .div_about_inicio_desc {
-        font-size: 4vw;
+        width: 80vw;
+        font-size: 5vw;
     }
     .div_about_overview {
         height: 63vh;

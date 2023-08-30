@@ -1,0 +1,99 @@
+.div_slider_inicio_content,
+.div_slider_about_content,
+.div_slider_participe_content {
+    position: absolute;
+    width: 60vw;
+    height: 70vh;
+}
+
+.inicio_title,
+.about_title,
+.participe_title {
+    margin: 10vh 0 0 0;
+    width: 100%;
+    height: 6vw;
+    line-height: 4vw;
+    color: #FFF;
+    font-size: 3vw;
+    font-weight: 800;
+    padding: 0 0 0 1vw;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    white-space: pre-line;
+}
+
+.inicio_desc,
+.about_desc,
+.participe_desc {
+    margin: 11vh 0 0 0;
+    width: 100%;
+    height: 1vw;
+    line-height: 1.2vw;
+    color: #FFF;
+    font-size: 1vw;
+    padding: 0 0 0 1vw;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    white-space: pre-line;
+}
+
+.inicio_button,
+.about_button,
+.participe_button {
+    position: absolute;
+    bottom: 2vh;
+    background-color: #FFF;
+    width: 20vw;
+    height: 6vh;
+    color: #3947B7;
+    font-size: 1.5vw;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50vw;
+    z-index: 1;
+}
+
+.inicio_button:hover,
+.about_button:hover,
+.participe_button:hover {
+    background-color: #3947B7;
+    color: #FFF;
+    cursor: pointer;
+}
+
+@media screen and (orientation: portrait) {
+    .div_slider_inicio_content,
+    .div_slider_about_content,
+    .div_slider_participe_content {
+        width: 80vw;
+        height: 40vh;
+    }
+    .inicio_title,
+    .about_title,
+    .participe_title {
+        margin: 0;
+        font-size: 5vw;
+        line-height: 3vh;
+    }
+    .inicio_desc,
+    .about_desc,
+    .participe_desc {
+        margin: 2vh 0 0 0;
+        height: 30vh;
+        font-size: 4vw;
+        line-height: 5vw;
+        align-items: start;
+        overflow-y: scroll;
+    }
+    .inicio_button,
+    .about_button,
+    .participe_button {
+        width: 35vw;
+        font-size: 4vw;
+        bottom: -5vh;
+    }
+}

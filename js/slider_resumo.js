@@ -1,5 +1,5 @@
 var carousel = document.getElementById('carousel');
-var speed = 3000; // 7 seconds
+var speed = 5000; // 5 seconds
 var slides, indicators, switcher;
 
 function carouselHide(num) {

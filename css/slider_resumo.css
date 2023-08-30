@@ -24,19 +24,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 .slide:nth-child(1) {
-    background-color: red;
     opacity: 1;
-}
-
-.slide:nth-child(2) {
-    background-color: green;
-}
-
-.slide:nth-child(3) {
-    background-color: blue;
 }
 
 .indicators {
@@ -68,7 +62,7 @@
 
 @media screen and (orientation: portrait) {
     .carousel {
-        height: 50vh;
+        height: 70vh;
     }
     .indicators {
         gap: 3vw;

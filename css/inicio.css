@@ -27,6 +27,7 @@
 }
 
 .div_overview {
+    background-color: #FBB91F;
     height: 40vh;
     display: flex;
     justify-content: center;
